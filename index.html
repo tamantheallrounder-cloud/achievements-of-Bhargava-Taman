@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bhargava Taman — Achievements</title>
+<style>
+:root{--ink:#1a1033;--card:#fffffff0;--mut:#5b4b86;--field:#f3edff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#f6f0ff;--card:#1d1240f0;--mut:#c5b5f5;--field:#2e1d63}}
+:root[data-theme="dark"]{--ink:#f6f0ff;--card:#1d1240f0;--mut:#c5b5f5;--field:#2e1d63}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;color:var(--ink);background:#ff2d95 linear-gradient(135deg,#ff2d95,#ff9a00,#ffe600,#00e5a8,#00b4ff,#8a2be2,#ff2d95);background-size:400% 400%;animation:bg 18s ease infinite;min-height:100vh;overflow-x:hidden}
+@keyframes bg{50%{background-position:100% 100%}}
+header{text-align:center;color:#fff;padding:48px 16px 18px;position:relative}
+header .hi{font-size:1.2rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+h1{margin:4px 0;font-size:clamp(2.3rem,11vw,5rem);font-weight:900;text-shadow:4px 4px 0 #1a1033,8px 8px 0 #ff2d9588;animation:pop 3s ease-in-out infinite}
+@keyframes pop{50%{transform:scale(1.04) rotate(-1deg)}}
+header p{font-size:1.15rem;font-weight:700;text-shadow:2px 2px 0 #1a1033}
+.fl{position:absolute;font-size:2rem;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-16px) rotate(12deg)}}
+.mq{overflow:hidden;white-space:nowrap;background:#1a1033;color:#fff;transform:rotate(-1.5deg);margin:14px -10px;padding:10px 0;border-block:3px solid #ffe600;font-weight:800;font-size:1.05rem}
+.mq.r{transform:rotate(1.5deg);background:#ffe600;color:#1a1033;border-color:#1a1033}
+.mq div{display:inline-block;animation:sc 30s linear infinite}
+.mq.r div{animation-direction:reverse}
+@keyframes sc{to{transform:translateX(-50%)}}
+main{max-width:680px;margin:0 auto;padding:12px 14px 60px}
+.card{background:var(--card);border-radius:22px;padding:18px;margin:20px 0;border-top:8px solid #ff2d95;box-shadow:0 10px 0 #1a103355,0 18px 30px #0003;animation:in .6s both}
+@keyframes in{from{opacity:0;transform:translateY(24px)}}
+.c1{border-color:#00b4ff}.c2{border-color:#00e5a8}.c3{border-color:#ff9a00}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{background:linear-gradient(90deg,#ff2d95,#8a2be2);color:#fff;border-radius:99px;padding:5px 14px;font-weight:800;font-size:.85rem}
+.date{color:var(--mut);font-size:.85rem;font-weight:700}
+.card img{display:block;width:100%;max-height:440px;object-fit:cover;border-radius:16px;margin:14px 0 4px}
+h2{margin:12px 0 4px;font-size:1.5rem}
+.cap{margin:0 0 8px;line-height:1.55;white-space:pre-wrap}
+.empty{text-align:center;font-size:1.3rem;font-weight:800}
+.cm{margin-top:14px;border-top:2px dashed var(--mut);padding-top:10px}
+h3{margin:0 0 8px;font-size:1rem}
+.one{background:var(--field);border-radius:12px;padding:8px 12px;margin:6px 0;display:flex;flex-direction:column;gap:2px;font-size:.95rem}
+.one b{color:#ff2d95}.none{color:var(--mut);font-size:.9rem}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--field);border:2px solid transparent;border-radius:12px;padding:10px 12px;margin:5px 0}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#8a2be2}
+.crow{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+.btn,.del{font:inherit;font-weight:800;border:0;border-radius:99px;padding:11px 20px;cursor:pointer;color:#fff;background:linear-gradient(90deg,#ff2d95,#ff9a00);box-shadow:0 4px 0 #1a1033}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #1a1033}.btn:disabled{opacity:.6}
+.del{background:#1a1033;font-size:.8rem;padding:6px 12px;box-shadow:none;margin-top:6px}
+#composer h2{margin-top:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body>
+<header>
+<span class="fl" style="left:8%;top:30px">🏆</span><span class="fl" style="right:10%;top:50px;animation-delay:1s">🌟</span><span class="fl" style="left:18%;bottom:0;animation-delay:2s">🎉</span><span class="fl" style="right:20%;bottom:6px;animation-delay:3s">🚀</span>
+<div class="hi">Hi, I'm</div><h1>Bhargava Taman</h1><p>My achievements &amp; wins — fresh updates every time!</p>
+</header>
+<div class="mq"><div></div></div>
+<main>
+<section class="card" id="composer" hidden>
+<h2>✍️ Add a new achievement</h2>
+<input id="title" placeholder="Title (e.g. 1st Prize in Science Fair!)" maxlength="120">
+<textarea id="text" rows="4" placeholder="Write the story, caption or details…"></textarea>
+<select id="tag"></select>
+<div id="photoRow"><input id="photo" type="file" accept="image/*"></div>
+<button class="btn" id="post">🚀 Add to page</button>
+<button class="btn" id="dl" hidden style="margin-top:10px">⬇️ Download updated page</button>
+<p class="none">After adding, tap Download and upload that file to your website host again.</p>
+</section>
+<script id="data" type="application/json">{"posts":[]}</script>
+<div id="feed"><div class="card empty">✨ Loading achievements…</div></div>
+</main>
+<div class="mq r"><div></div></div>
+<script>
+const $=s=>document.querySelector(s);
+const TAGS=["🏆 Award","🥇 Competition","📚 Academics","🎨 Creative","⚽ Sports","🚀 Project","🎤 Event","📜 Certificate"];
+let state=JSON.parse($('#data').textContent);const admin=location.hash==='#admin';
+function mk(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+document.querySelectorAll('.mq div').forEach(d=>{const s=TAGS.concat(["✨ Bhargava Taman ✨"]).join("   ★   ")+"   ★   ";d.textContent=s+s+s+s});
+function renderPosts(){const f=$('#feed');f.textContent='';const ps=state.posts.slice().sort((a,b)=>b.ts-a.ts);
+if(!ps.length){f.append(mk('div','card empty','🌈 Achievements are on the way — check back soon!'));return}
+ps.forEach((p,i)=>{const c=mk('article','card c'+(i%4));
+const top=mk('div','top');top.append(mk('span','chip',p.tag||'🏆 Award'),mk('span','date',new Date(p.ts).toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric'})));c.append(top);
+if(p.img){const im=new Image();im.src=p.img;im.alt=p.title||'Achievement photo';c.append(im)}
+c.append(mk('h2',0,p.title||''),mk('p','cap',p.text||''));
+if(admin){const d=mk('button','del','🗑 Delete');let armed=0;d.onclick=()=>{if(!armed){armed=1;d.textContent='Tap again to delete';setTimeout(()=>{armed=0;d.textContent='🗑 Delete'},3000);return}state.posts=state.posts.filter(x=>x.id!==p.id);renderPosts();$('#dl').hidden=false};c.append(d)}
+f.append(c)})}
+function build(){const c=document.documentElement.cloneNode(true);c.querySelector('#feed').textContent='';c.querySelectorAll('.mq div').forEach(d=>d.textContent='');c.querySelector('#tag').textContent='';c.querySelector('#composer').hidden=true;c.querySelector('#dl').hidden=true;c.querySelector('#data').textContent=JSON.stringify(state).replace(/</g,'\\u003c');return '<!DOCTYPE html>\n'+c.outerHTML}
+function shrink(f){return new Promise((ok,no)=>{const im=new Image(),u=URL.createObjectURL(f);im.onload=()=>{const k=Math.min(1,1100/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',.8))};im.onerror=no;im.src=u})}
+function setupComposer(){$('#composer').hidden=false;const sel=$('#tag');TAGS.forEach(t=>sel.append(new Option(t,t)));
+$('#post').onclick=async()=>{const title=$('#title').value.trim(),text=$('#text').value.trim(),f=$('#photo').files[0],b=$('#post');if(!title&&!text&&!f)return;b.disabled=true;
+try{const img=f?await shrink(f):null;state.posts.push({id:Date.now().toString(36),title,text,tag:sel.value,img,ts:Date.now()});renderPosts();$('#title').value='';$('#text').value='';$('#photo').value='';$('#dl').hidden=false;b.textContent='✅ Added! Now download'}catch(e){b.textContent='Photo problem — try another'}
+setTimeout(()=>{b.disabled=false;b.textContent='🚀 Add to page'},2500)};
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([build()],{type:'text/html'}));a.download='index.html';a.click()}}
+renderPosts();if(admin)setupComposer();
+</script></body></html>
